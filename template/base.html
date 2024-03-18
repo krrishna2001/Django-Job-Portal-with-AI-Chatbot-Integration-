@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include other head elements such as meta tags, title, CSS files, etc. -->
+
+    {% include 'head.html' %}
+</head>
+<body id="top">
+    {% include 'header.html' %}
+
+    <!-- Add Botpress chat widget container -->
+    <div id="botpress-webchat"></div>
+
+    {% block content %}{% endblock %}
+
+    {% include 'footer.html' %}
+    {% include 'scripts.html' %} 
+
+    {% block extra_scripts %} 
+    {% endblock %}
+
+    <!-- Initialize Botpress webchat -->
+    <script src="https://mediafiles.botpress.cloud/1e9a1a61-a4de-410f-b872-2970971a69d9/webchat/botpress-webchat.js"></script>
+    <script>
+        window.botpressWebChat.init({ host: 'https://mediafiles.botpress.cloud', botId: '1e9a1a61-a4de-410f-b872-2970971a69d9' });
+    </script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+          "composerPlaceholder": "Chat with bot",
+          "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+          "botId": "1e9a1a61-a4de-410f-b872-2970971a69d9",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "1e9a1a61-a4de-410f-b872-2970971a69d9",
+          "webhookId": "d8e485ca-f281-4b4a-b17a-252f47a29cda",
+          "lazySocket": true,
+          "themeName": "newThemeName",
+    "frontendVersion": "v2",
+    "theme": "newTheme",
+    "themeColor": "#3498db"
+      });
+</script>
+</body>
+</html>
