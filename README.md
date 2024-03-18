@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Job Portal
 Django Job Portal.       
 
@@ -56,3 +57,6 @@ python manage.py runserver
     <h3>========Thank You=========</h3>
 </div>
 
+=======
+# Job-Portal-with-AI-bot-integrations
+>>>>>>> 05ef15c8db0cb43f291ede8322831818ee586758
